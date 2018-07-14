@@ -4,20 +4,18 @@ var {Link, IndexLink} = require('react-router');
 var Nav = React.createClass({
   render: function(){
     return (
-        <div className="top-bar">
-        <div className="float-left">
-          <ul className="dropdown menu" data-dropdown-menu>
-            <li className="menu-text">React Timer App</li>
-            <li><IndexLink to='/timer' activeClassName='active-link'>Timer</IndexLink></li>
-            <li><Link to='/countdown' activeClassName='active-link'>Countdown</Link></li>
-          </ul>
+      <div className="top-bar" id="responsive-menu">
+        <div className="top-bar-left">
+        <ul className="menu">
+          <li className="menu-text">React App</li>
+          <li><IndexLink to='/timer' activeClassName='active-link'>Timer</IndexLink></li>
+          <li><IndexLink to='/countdown' activeClassName='active-link'>Countdown</IndexLink></li>
+        </ul>
         </div>
-        <div className="float-right">
-          <ul className="menu">
-            <li><a href="https://gauravadhikari.com"> Developer</a></li>
-          </ul>
-        </div>
-        </div>
+          <div className="top-bar-right">
+            <a href="https://gauravadhikari.com"> Developer</a>
+          </div>
+      </div>
     );
   }
 });
