@@ -1,6 +1,7 @@
 var React = require('react');
 var Clock = require('Clock');
 var CountdownForm = require('CountdownForm');
+var Controls = require('Controls');
 
 var Countdown = React.createClass({
   getInitialState: function(){
@@ -34,11 +35,13 @@ var Countdown = React.createClass({
   },
   render: function(){
     var {count} = this.state;
+    var {countdownStatus} = this.state;
     return (
       <div>
       <h1>Countdown</h1>
       <Clock totalSeconds={count} />
       <CountdownForm onSetCountdown={this.hanleSetCountdown} />
+      <Controls countdownStatus={countdownStatus}/>
       </div>
     );
   }
