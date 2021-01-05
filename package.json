@@ -10,7 +10,7 @@
   "author": "Gaurav Adhikari",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "expect": "^23.4.0",
     "express": "^4.16.3",
     "foundation-sites": "^6.5.0-rc.2",
